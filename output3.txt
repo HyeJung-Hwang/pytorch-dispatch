@@ -1,0 +1,179 @@
+=================== Forward =====================
+Total latency : 0.04272174835205078 seconds
+dict_keys(['Global', 'conv1', 'bn1', 'relu', 'maxpool', 'layer1', 'layer2', 'layer3', 'layer4', 'avgpool', 'fc'])
+Module:  Global
+profiler._record_function_enter_new latency : 1.430511474609375e-05 seconds
+profiler._record_function_exit latency : 4.291534423828125e-06 seconds
+aten.clone latency : 0.002257823944091797 seconds
+aten.convolution latency : 0.030515432357788086 seconds
+aten.add_ latency : 0.0015957355499267578 seconds
+aten.empty latency : 0.000682830810546875 seconds
+aten.native_batch_norm latency : 0.005141735076904297 seconds
+aten.relu_ latency : 0.0007951259613037109 seconds
+aten.detach latency : 0.0002830028533935547 seconds
+aten.max_pool2d_with_indices latency : 0.00089263916015625 seconds
+aten.mean latency : 9.489059448242188e-05 seconds
+aten.view latency : 9.775161743164062e-06 seconds
+aten.t latency : 1.1205673217773438e-05 seconds
+aten.addmm latency : 0.00040268898010253906 seconds
+aten.sum latency : 2.0265579223632812e-05 seconds
+
+Module:  conv1
+aten.clone latency : 0.00040531158447265625 seconds
+aten.convolution latency : 0.0011899471282958984 seconds
+
+Module:  bn1
+aten.clone latency : 0.0001537799835205078 seconds
+aten.add_ latency : 2.956390380859375e-05 seconds
+aten.empty latency : 1.811981201171875e-05 seconds
+aten.native_batch_norm latency : 0.00036907196044921875 seconds
+
+Module:  relu
+aten.clone latency : 0.00016236305236816406 seconds
+aten.relu_ latency : 6.29425048828125e-05 seconds
+aten.detach latency : 8.106231689453125e-06 seconds
+
+Module:  maxpool
+aten.clone latency : 0.00016951560974121094 seconds
+aten.max_pool2d_with_indices latency : 0.00089263916015625 seconds
+
+Module:  layer1
+aten.clone latency : 5.650520324707031e-05 seconds
+aten.convolution latency : 0.004938364028930664 seconds
+aten.add_ latency : 0.0007028579711914062 seconds
+aten.empty latency : 0.00013780593872070312 seconds
+aten.native_batch_norm latency : 0.0019881725311279297 seconds
+aten.relu_ latency : 0.00019216537475585938 seconds
+aten.detach latency : 5.888938903808594e-05 seconds
+
+Module:  layer2
+aten.clone latency : 0.00024008750915527344 seconds
+aten.convolution latency : 0.006293773651123047 seconds
+aten.add_ latency : 0.0003685951232910156 seconds
+aten.empty latency : 0.00015735626220703125 seconds
+aten.native_batch_norm latency : 0.00135040283203125 seconds
+aten.relu_ latency : 0.00017690658569335938 seconds
+aten.detach latency : 6.937980651855469e-05 seconds
+
+Module:  layer3
+aten.clone latency : 0.00010180473327636719 seconds
+aten.convolution latency : 0.008518695831298828 seconds
+aten.add_ latency : 0.0002968311309814453 seconds
+aten.empty latency : 0.0002307891845703125 seconds
+aten.native_batch_norm latency : 0.0009953975677490234 seconds
+aten.relu_ latency : 0.00024271011352539062 seconds
+aten.detach latency : 8.96453857421875e-05 seconds
+
+Module:  layer4
+aten.clone latency : 4.363059997558594e-05 seconds
+aten.convolution latency : 0.009574651718139648 seconds
+aten.add_ latency : 0.00019788742065429688 seconds
+aten.empty latency : 0.00013875961303710938 seconds
+aten.native_batch_norm latency : 0.000438690185546875 seconds
+aten.relu_ latency : 0.00012040138244628906 seconds
+aten.detach latency : 5.698204040527344e-05 seconds
+
+Module:  avgpool
+aten.clone latency : 2.5510787963867188e-05 seconds
+aten.mean latency : 9.489059448242188e-05 seconds
+
+Module:  fc
+aten.clone latency : 1.0728836059570312e-05 seconds
+aten.t latency : 1.1205673217773438e-05 seconds
+aten.addmm latency : 0.00040268898010253906 seconds
+
+=================== Backward =====================
+Total latency : 0.14246630668640137 seconds
+dict_keys(['Global', 'fc', 'avgpool', 'layer4', 'layer3', 'layer2', 'layer1', 'maxpool', 'relu', 'bn1', 'conv1'])
+Module:  Global
+aten.ones_like latency : 1.3828277587890625e-05 seconds
+aten.expand latency : 2.2172927856445312e-05 seconds
+aten.t latency : 1.9788742065429688e-05 seconds
+aten.mm latency : 0.0006628036499023438 seconds
+aten.sum latency : 2.2649765014648438e-05 seconds
+aten.view latency : 1.4781951904296875e-05 seconds
+aten.detach latency : 0.001340627670288086 seconds
+aten.div latency : 0.008209943771362305 seconds
+aten.threshold_backward latency : 0.0031638145446777344 seconds
+aten.native_batch_norm_backward latency : 0.005019664764404297 seconds
+aten.convolution_backward latency : 0.058621883392333984 seconds
+aten.add latency : 0.001901388168334961 seconds
+aten.max_pool2d_with_indices_backward latency : 0.00030112266540527344 seconds
+profiler._record_function_enter_new latency : 1.621246337890625e-05 seconds
+aten.lift_fresh latency : 0.00044345855712890625 seconds
+aten.zeros_like latency : 0.012620925903320312 seconds
+aten.add_ latency : 0.00445103645324707 seconds
+aten.lerp_ latency : 0.011110305786132812 seconds
+aten.mul_ latency : 0.006955862045288086 seconds
+aten.addcmul_ latency : 0.007984638214111328 seconds
+aten._local_scalar_dense latency : 0.00037407875061035156 seconds
+aten.sqrt latency : 0.007447004318237305 seconds
+aten.addcdiv_ latency : 0.011742830276489258 seconds
+profiler._record_function_exit latency : 5.4836273193359375e-06 seconds
+
+Module:  fc
+aten.t latency : 1.9788742065429688e-05 seconds
+aten.mm latency : 0.0006628036499023438 seconds
+aten.sum latency : 2.2649765014648438e-05 seconds
+aten.view latency : 7.3909759521484375e-06 seconds
+aten.detach latency : 1.33514404296875e-05 seconds
+
+Module:  avgpool
+aten.expand latency : 8.106231689453125e-06 seconds
+aten.div latency : 5.3882598876953125e-05 seconds
+
+Module:  layer4
+aten.detach latency : 0.0002696514129638672 seconds
+aten.threshold_backward latency : 0.00041294097900390625 seconds
+aten.native_batch_norm_backward latency : 0.0005028247833251953 seconds
+aten.convolution_backward latency : 0.019250869750976562 seconds
+aten.add latency : 0.00018095970153808594 seconds
+
+Module:  layer3
+aten.detach latency : 0.00045037269592285156 seconds
+aten.threshold_backward latency : 0.0006716251373291016 seconds
+aten.native_batch_norm_backward latency : 0.0009911060333251953 seconds
+aten.convolution_backward latency : 0.017353534698486328 seconds
+aten.add latency : 0.000339508056640625 seconds
+
+Module:  layer2
+aten.detach latency : 0.0003180503845214844 seconds
+aten.threshold_backward latency : 0.0006196498870849609 seconds
+aten.native_batch_norm_backward latency : 0.0012493133544921875 seconds
+aten.convolution_backward latency : 0.012267827987670898 seconds
+aten.add latency : 0.0006213188171386719 seconds
+
+Module:  layer1
+aten.detach latency : 0.0002601146697998047 seconds
+aten.threshold_backward latency : 0.0011444091796875 seconds
+aten.native_batch_norm_backward latency : 0.0019063949584960938 seconds
+aten.convolution_backward latency : 0.009013891220092773 seconds
+aten.add latency : 0.0007596015930175781 seconds
+
+Module:  maxpool
+aten.max_pool2d_with_indices_backward latency : 0.00030112266540527344 seconds
+
+Module:  relu
+aten.detach latency : 6.9141387939453125e-06 seconds
+aten.threshold_backward latency : 0.0003151893615722656 seconds
+
+Module:  bn1
+aten.native_batch_norm_backward latency : 0.000370025634765625 seconds
+aten.detach latency : 1.2636184692382812e-05 seconds
+
+Module:  conv1
+aten.convolution_backward latency : 0.0007357597351074219 seconds
+aten.detach latency : 9.5367431640625e-06 seconds
+profiler._record_function_enter_new latency : 1.621246337890625e-05 seconds
+aten.lift_fresh latency : 0.00044345855712890625 seconds
+aten.zeros_like latency : 0.012620925903320312 seconds
+aten.add_ latency : 0.00445103645324707 seconds
+aten.lerp_ latency : 0.011110305786132812 seconds
+aten.mul_ latency : 0.006955862045288086 seconds
+aten.addcmul_ latency : 0.007984638214111328 seconds
+aten._local_scalar_dense latency : 0.00037407875061035156 seconds
+aten.sqrt latency : 0.007447004318237305 seconds
+aten.div latency : 0.008156061172485352 seconds
+aten.addcdiv_ latency : 0.011742830276489258 seconds
+profiler._record_function_exit latency : 5.4836273193359375e-06 seconds
+
